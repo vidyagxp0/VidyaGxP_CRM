@@ -19,7 +19,7 @@ export default function SideContent() {
     >
       <div style={{ width: '100%' }}>
         <img
-          src={logo}
+          src="/lifelink.png"
           alt="IDURAR ERP CRM"
           style={{ margin: '0 auto 40px', display: 'block' }}
           height={63}

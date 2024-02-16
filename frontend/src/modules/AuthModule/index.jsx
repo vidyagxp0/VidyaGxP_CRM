@@ -32,7 +32,7 @@ const AuthModule = ({ authContent, AUTH_TITLE }) => {
       >
         <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 0 }} span={0}>
           <img
-            src={logo}
+            src="/lifelink.png"
             alt="Logo"
             style={{
               margin: '-70px auto 40px',

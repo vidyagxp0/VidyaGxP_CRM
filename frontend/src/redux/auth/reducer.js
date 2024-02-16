@@ -2,7 +2,7 @@ import * as actionTypes from './types';
 
 const INITIAL_STATE = {
   current: {},
-  isLoggedIn: false,
+  isLoggedIn: true,
   isLoading: false,
   isSuccess: false,
 };
