@@ -118,24 +118,26 @@ export const logout = () => async (dispatch) => {
   window.localStorage.removeItem('auth');
   window.localStorage.removeItem('settings');
   window.localStorage.setItem('isLogout', JSON.stringify({ isLogout: true }));
-  const data = await authService.logout();
-  if (data.success === false) {
-    const auth_state = {
-      current: tmpAuth,
-      isLoggedIn: true,
-      isLoading: false,
-      isSuccess: true,
-    };
-    window.localStorage.setItem('auth', JSON.stringify(auth_state));
-    window.localStorage.setItem('settings', JSON.stringify(tmpSettings));
-    window.localStorage.removeItem('isLogout');
-    dispatch({
-      type: actionTypes.LOGOUT_FAILED,
-      payload: data.result,
-    });
-  } else {
-    // on lgout success
-  }
+  // // const data = await authService.logout();
+  // if (data.success === false) {
+  //   console.log("condition failed")
+  //   const auth_state = {
+  //     current: tmpAuth,
+  //     isLoggedIn: true,
+  //     isLoading: false,
+  //     isSuccess: true,
+  //   };
+  //   window.localStorage.setItem('auth', JSON.stringify(auth_state));
+  //   window.localStorage.setItem('settings', JSON.stringify(tmpSettings));
+  //   window.localStorage.removeItem('isLogout');
+  //   dispatch({
+  //     type: actionTypes.LOGOUT_FAILED,
+  //     payload: data.result,
+  //   });
+  // } else {
+  //   console.log("condition ")
+  //   // on lgout success
+  // }
 };
 
 export const updateProfile =
