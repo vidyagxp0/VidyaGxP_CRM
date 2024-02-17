@@ -10,8 +10,7 @@ import ResetPassword from '@/pages/ResetPassword';
 export default function AuthRouter() {
   return (
     <Routes>
-      {/* <Route element={<>pankaj</>} path='/'/> */}
-      <Route element={<Register />} path="/" />
+      <Route element={<Login />} path="/" />
       <Route element={<Login />} path="/login" />
       <Route element={<Navigate to="/login" replace />} path="/logout" />
       <Route element={<Register />} path="/register" />
