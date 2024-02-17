@@ -13,7 +13,7 @@ export default function LoginForm() {
         name="email"
         rules={[
           {
-            required: true,
+            required: false,
           },
           {
             type: 'email',
@@ -32,7 +32,7 @@ export default function LoginForm() {
         name="password"
         rules={[
           {
-            required: true,
+            required: false,
           },
         ]}
       >
