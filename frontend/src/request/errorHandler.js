@@ -4,7 +4,7 @@ import codeMessage from './codeMessage';
 const errorHandler = (error) => {
   const { response } = error;
 
-  if (response.data && response.data.jwtExpired) {
+  if (response?.data && response?.data?.jwtExpired) {
     const result = window.localStorage.getItem('auth');
     const jsonFile = window.localStorage.getItem('isLogout');
     const { isLogout } = (jsonFile && JSON.parse(jsonFile)) || false;

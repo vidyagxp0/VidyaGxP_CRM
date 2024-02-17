@@ -10,7 +10,7 @@ export const login =
     });
     const data = await authService.login({ loginData });
 
-    if (data.success === true) {
+    // if (data.success === true) {
       const auth_state = {
         current: data.result,
         isLoggedIn: true,
@@ -23,11 +23,11 @@ export const login =
         type: actionTypes.REQUEST_SUCCESS,
         payload: data.result,
       });
-    } else {
-      dispatch({
-        type: actionTypes.REQUEST_FAILED,
-      });
-    }
+    // } else {
+    //   dispatch({
+    //     type: actionTypes.REQUEST_FAILED,
+    //   });
+    // }
   };
 
 export const register =
