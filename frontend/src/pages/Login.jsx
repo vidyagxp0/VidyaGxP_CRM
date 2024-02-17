@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
@@ -13,6 +12,7 @@ import LoginForm from '@/forms/LoginForm';
 import Loading from '@/components/Loading';
 import AuthModule from '@/modules/AuthModule';
 
+
 const LoginPage = () => {
   const translate = useLanguage();
   const { isLoading, isSuccess } = useSelector(selectAuth);
@@ -21,8 +21,12 @@ const LoginPage = () => {
 
   const dispatch = useDispatch();
   const onFinish = (values) => {
-    dispatch(login({ loginData: values }));
-  };
+    if(values.email ==='amit@gmail.com' && values.password === 'Amit@21'){
+      dispatch(login({ loginData: values }));
+    }else{
+      navigate('/');
+    }  
+}
 
   useEffect(() => {
     if (isSuccess) navigate('/');
